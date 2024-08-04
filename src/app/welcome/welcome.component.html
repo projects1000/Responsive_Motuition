@@ -1,0 +1,32 @@
+<div class="welcome-container">
+  <header>
+    <div class="header-content">
+      <div class="header-logo-container">
+        <div class="logo-container">
+          <img src="assets/logo.jpeg" alt="Logo Image" />
+        </div>
+      </div>
+      <div class="header-text">
+        <h1>ମୋ ଟ୍ୟୁସନ୍</h1>
+        <p>ସଫଳତା ଏଠାରୁ ଆରମ୍ଭ....</p>
+      </div>
+    </div>
+    <section class="content-container">
+      <section class="cards-container">
+        <app-card *ngFor="let card of cards" 
+                  [title]="card.title" 
+                  [description]="card.description" 
+                  [imageSrc]="card.imageSrc"></app-card>
+      </section>
+      <div class="separator"></div>
+      <section class="auth-container">
+        <div class="auth-card" (click)="navigateToSignUp()">
+          <button>Sign Up</button>
+        </div>
+        <div class="auth-card" (click)="navigateToLogin()">
+          <button>Log In</button>
+        </div>
+      </section>
+    </section>
+  </header>
+</div>
