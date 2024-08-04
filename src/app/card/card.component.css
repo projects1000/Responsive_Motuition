@@ -6,7 +6,7 @@
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid #e3c8c8;
   border-radius: 8px; /* Slightly smaller border radius */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   overflow: hidden;
