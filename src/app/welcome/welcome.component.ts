@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent {
-
+  userName: string = '';
+  userQuestion: string = '';
+  isDialogOpen: boolean = false; // Ensure this property is declared
   cards = [
     { title: 'CBSE', description: 'CBSE Courses', imageSrc: 'assets/cbse.png' },
     { title: 'ICSE', description: 'ICSE Courses', imageSrc: 'assets/icse.png' },
@@ -27,5 +29,18 @@ export class WelcomeComponent {
 
   navigateToLogin() {
     this.router.navigate(['/login']);
+  }
+  openModal() {
+    this.isDialogOpen = true;
+  }
+
+  closeModal() {
+    this.isDialogOpen = false;
+  }
+
+  submitQuestion() {
+    // Handle form submission logic here
+    console.log('Question submitted:', this.userQuestion);
+    this.closeModal();
   }
 }
