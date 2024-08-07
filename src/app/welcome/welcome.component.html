@@ -26,7 +26,26 @@
         <div class="auth-card" (click)="navigateToLogin()">
           <button>Log In</button>
         </div>
+        <div class="ask-question-container">
+          <button (click)="openModal()">Ask Question</button>
+        </div>
       </section>
     </section>
   </header>
+
+  <!-- Modal Popup -->
+  <div class="modal" [ngClass]="{'show': isDialogOpen}">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h2>Ask a Question</h2>
+      <form (ngSubmit)="submitQuestion()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="userName" name="name" required>
+        <label for="question">Question:</label>
+        <textarea id="question" [(ngModel)]="userQuestion" name="question" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  
 </div>
