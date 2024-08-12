@@ -13,10 +13,13 @@
     </div>
     <section class="content-container">
       <section class="cards-container">
-        <app-card *ngFor="let card of cards" 
-                  [title]="card.title" 
-                  [description]="card.description" 
-                  [imageSrc]="card.imageSrc"></app-card>
+        <app-card *ngFor="let card of cards"
+                  [title]="card.title"
+                  [description]="card.description"
+                  [imageSrc]="card.imageSrc"
+                  [redirectUrl]="card.redirectUrl"
+                  (cardClick)="onCardClick($event)">
+        </app-card>
       </section>
       <div class="separator"></div>
       <section class="auth-container">
@@ -47,5 +50,4 @@
       </form>
     </div>
   </div>
-  
 </div>
