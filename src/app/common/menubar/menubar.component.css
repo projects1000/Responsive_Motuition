@@ -1,0 +1,150 @@
+/* Overall Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Topbar */
+  .topbar {
+    width: 100%; /* Full width of the viewport */
+    height: 50px; /* Adjust as needed */
+    background: linear-gradient(to right, #f9d423, #ff4e50, #ff6f61); /* Gradient background */
+    color: white;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Keep the topbar fixed at the top */
+    top: 0;
+    left: 0; /* Align topbar to the very left of the page */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    padding: 0 20px; /* Add some padding to the left and right */
+  }
+  
+  /* Topbar Content */
+  .topbar-content {
+    font-weight: bold;
+    color: white;
+    font-size: 18px; /* Adjust size as needed */
+    text-align: left; /* Ensure text is aligned to the left */
+    margin-right: auto; /* Push content to the left */
+  }
+  
+  /* Topbar Heading */
+  .topbar h1 {
+    font-weight: bold;
+    color: white;
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0; /* Remove default margin */
+    text-align: center; /* Center text within the element */
+    position: absolute; /* Absolute positioning within topbar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+  }
+  
+  /* Topbar Links */
+  .topbar-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Align links to the right */
+  }
+  
+  /* Link Styling */
+  .topbar-link {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .topbar-link:hover {
+    color: #ff9800;
+    text-decoration: underline;
+  }
+  
+  /* Menu */
+  .menu {
+    width: 250px;
+    background: linear-gradient(to bottom, #ffeb3b, #8bc34a, #8d6e63);
+    position: fixed;
+    top: 50px; /* Start below the topbar */
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+  }
+  
+  /* Menu Header */
+  .menu-header {
+    background: #ffffff;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+  }
+  
+  /* Menu Content */
+  .menu-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 50px; /* Add space for the arrow */
+  }
+  
+  /* Link Items */
+  .link_item {
+    width: 100%;
+    height: 60px;
+    background: #ffffff;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 0 15px 15px 0;
+    transition: background 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+    position: relative;
+    font-size: 18px;
+  }
+  
+  /* Arrow Icon */
+  .link_item::after {
+    content: '→'; /* Unicode arrow character */
+    font-size: 24px;
+    color: #ff9800;
+    position: absolute;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Hover Effect for Link Items */
+  .link_item:hover {
+    background: #ff9800;
+    color: #ffffff;
+    padding-left: 40px; /* Add space for the arrow */
+  }
+  
+  .link_item:hover::after {
+    opacity: 1;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    background: #ffffe0;
+    margin-left: 250px; /* Width of the menu */
+    padding: 20px;
+    margin-top: 50px; /* Ensure content starts below the topbar */
+    overflow-y: auto;
+  }
+  
