@@ -1,0 +1,8 @@
+<div class="subject-cards">
+    <div *ngIf="subjects.length === 0">No subjects available for this class.</div>
+    <div *ngFor="let subject of subjects" class="card">
+      <img [src]="subject.image" alt="{{ subject.name }}">
+      <p>{{ subject.name }}</p>
+    </div>
+  </div>
+  
