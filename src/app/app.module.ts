@@ -11,7 +11,9 @@ import { CbseComponent } from './insideCard/cbse/cbse.component';
 import { MatIconModule } from '@angular/material/icon'; // Import MatIconModule
 import { MenubarComponent } from './common/menubar/menubar.component';
 import { SubjectInfoComponent } from './subject-info/subject-info.component';
-
+import { SubjectCardsComponent } from './subject-cards/subject-cards.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { SubjectInfoComponent } from './subject-info/subject-info.component';
     CardComponent,
     CbseComponent,
     MenubarComponent,
-    SubjectInfoComponent
+    SubjectInfoComponent,
+    SubjectCardsComponent
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA], // Add this line
   imports: [
@@ -27,7 +31,9 @@ import { SubjectInfoComponent } from './subject-info/subject-info.component';
     AppRoutingModule,
     FormsModule, // Add FormsModule here
     MatIconModule, // Add MatIconModule here
-    BrowserAnimationsModule // Add BrowserAnimationsModule here
+    BrowserAnimationsModule ,
+    MatButtonModule,
+    MatCardModule// Add BrowserAnimationsModule here
   ],
   providers: [],
   bootstrap: [AppComponent] // Only AppComponent should be bootstrapped

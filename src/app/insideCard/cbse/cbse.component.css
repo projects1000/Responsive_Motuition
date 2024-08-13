@@ -1,0 +1,35 @@
+/* cbse.component.css */
+.cbse-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .top-bar {
+    background-color: #f8f9fa; /* Light background for top bar */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1; /* Takes remaining vertical space */
+    overflow: hidden; /* Prevent overflow issues */
+  }
+  
+  .menu-bar {
+    width: 250px; /* Fixed width for the menu bar */
+    background-color: #f0f0f0; /* Light background for menu bar */
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  .subject-section {
+    flex: 1; /* Takes remaining space */
+    padding: 10px;
+    background-color: #fff; /* Background for subject section */
+    overflow-y: auto; /* Add scroll if content overflows */
+  }
+  

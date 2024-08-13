@@ -1,6 +1,8 @@
 <!-- cbse.component.html -->
 <app-menubar></app-menubar>
-
 <div class="cbse-content">
-    <!-- Your CBSE content here -->
-</div>
+    <!-- Display subject cards only if classId is set -->
+    <app-subject-cards *ngIf="classId" [classId]="classId"></app-subject-cards>
+  </div>
+  
+  

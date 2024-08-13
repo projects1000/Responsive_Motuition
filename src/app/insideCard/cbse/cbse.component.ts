@@ -8,11 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CbseComponent implements OnInit {
 
+  classId!: number | null; // Change type to allow null
+
   constructor(private route: ActivatedRoute){
     console.log("Inside cbse app");
   }
   ngOnInit(): void {
-   
+    this.route.paramMap.subscribe(params => {
+      this.classId = +params.get('classId')!;
+    });
   }
   ngOnDestroy() {
     // alert("Dest")

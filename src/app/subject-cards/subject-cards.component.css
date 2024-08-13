@@ -1,0 +1,21 @@
+/* subject-cards.component.css */
+.subject-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust gap between cards as needed */
+  }
+  
+  .card {
+    width: 200px; /* Adjust card width as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
